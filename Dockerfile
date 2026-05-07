@@ -6,10 +6,8 @@ WORKDIR /app
 COPY . .
 
 # Fix line endings for mvnw (in case of Windows development) and make it executable
-RUN tr -d '\r' < mvnw > mvnw_unix && mv mvnw_unix mvnw && chmod +x mvnw
+RUN mvn clean install
 
-# Build the application
-RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Run the application
 FROM eclipse-temurin:21-jre-alpine
