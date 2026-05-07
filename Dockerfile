@@ -24,4 +24,4 @@ ENV JAVA_OPTS="-Xmx384M -Xms256M"
 EXPOSE 8080
 
 # Use shell form to allow environment variable expansion
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dserver.port=${PORT:-8080} -jar app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
