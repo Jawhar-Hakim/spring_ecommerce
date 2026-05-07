@@ -1,0 +1,10 @@
+target/
+*.jar
+.git/
+.idea/
+.settings/
+.project
+.classpath
+Dockerfile
+.dockerignore
+uploads/
